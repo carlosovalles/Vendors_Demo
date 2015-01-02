@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		42117FF81A223F5500F8137A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42117FF71A223F5500F8137A /* MapKit.framework */; };
+		4214A33F19B9372A00FFB8AF /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4214A33E19B9372A00FFB8AF /* CoreImage.framework */; };
+		421E31ED19B6EC8D00F4B033 /* KZVendorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 421E31EC19B6EC8D00F4B033 /* KZVendorViewController.m */; };
+		421E31EF19B6FCB100F4B033 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421E31EE19B6FCB100F4B033 /* QuartzCore.framework */; };
+		42204C2E1A093BE600C07F76 /* Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 42204C2D1A093BE600C07F76 /* Colors.m */; };
+		429324EC19B6A58B00F99A8A /* KZLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 429324EB19B6A58B00F99A8A /* KZLoginViewController.m */; };
+		429926DE1962294700EEC798 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 429926DD1962294700EEC798 /* Foundation.framework */; };
+		429926E01962294700EEC798 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 429926DF1962294700EEC798 /* CoreGraphics.framework */; };
+		429926E21962294700EEC798 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 429926E11962294700EEC798 /* UIKit.framework */; };
+		429926E81962294700EEC798 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 429926E61962294700EEC798 /* InfoPlist.strings */; };
+		429926EA1962294700EEC798 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 429926E91962294700EEC798 /* main.m */; };
+		429926EE1962294700EEC798 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 429926ED1962294700EEC798 /* AppDelegate.m */; };
+		429926F01962294700EEC798 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 429926EF1962294700EEC798 /* Images.xcassets */; };
+		4299270F19622A1100EEC798 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4299270E19622A1100EEC798 /* libc++.dylib */; };
+		4299271119622A2900EEC798 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4299271019622A2900EEC798 /* libicucore.dylib */; };
+		4299271419622B7A00EEC798 /* KZConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4299271319622B7A00EEC798 /* KZConnectionManager.m */; };
+		42BCB85319642E7F00D8EC4B /* kz.client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42BCB85219642E7F00D8EC4B /* kz.client.a */; };
+		BC3EE1FA1A2E4D71008D86B7 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3EE1F91A2E4D71008D86B7 /* CoreTelephony.framework */; };
+		BC3EE1FC1A2E4DD7008D86B7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3EE1FB1A2E4DD7008D86B7 /* CFNetwork.framework */; };
+		BC3EE1FE1A2E4DFF008D86B7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3EE1FD1A2E4DFF008D86B7 /* CoreLocation.framework */; };
+		BC3EE2001A2E4E0F008D86B7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3EE1FF1A2E4E0F008D86B7 /* SystemConfiguration.framework */; };
+		BC3EE2021A2E4E28008D86B7 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3EE2011A2E4E28008D86B7 /* libz.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		42117FF71A223F5500F8137A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4214A33E19B9372A00FFB8AF /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		421E31EB19B6EC8D00F4B033 /* KZVendorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZVendorViewController.h; sourceTree = "<group>"; };
+		421E31EC19B6EC8D00F4B033 /* KZVendorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZVendorViewController.m; sourceTree = "<group>"; };
+		421E31EE19B6FCB100F4B033 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		42204C2C1A093BE600C07F76 /* Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
+		42204C2D1A093BE600C07F76 /* Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colors.m; sourceTree = "<group>"; };
+		429324EA19B6A58B00F99A8A /* KZLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZLoginViewController.h; sourceTree = "<group>"; };
+		429324EB19B6A58B00F99A8A /* KZLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZLoginViewController.m; sourceTree = "<group>"; };
+		429926DA1962294700EEC798 /* Vendors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vendors.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		429926DD1962294700EEC798 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		429926DF1962294700EEC798 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		429926E11962294700EEC798 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		429926E51962294700EEC798 /* Vendors-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Vendors-Info.plist"; sourceTree = "<group>"; };
+		429926E71962294700EEC798 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		429926E91962294700EEC798 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		429926EB1962294700EEC798 /* Vendors-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Vendors-Prefix.pch"; sourceTree = "<group>"; };
+		429926EC1962294700EEC798 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		429926ED1962294700EEC798 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		429926EF1962294700EEC798 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		429926F61962294700EEC798 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		4299270E19622A1100EEC798 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		4299271019622A2900EEC798 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		4299271219622B7A00EEC798 /* KZConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZConnectionManager.h; sourceTree = "<group>"; };
+		4299271319622B7A00EEC798 /* KZConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZConnectionManager.m; sourceTree = "<group>"; };
+		42BCB85219642E7F00D8EC4B /* kz.client.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = kz.client.a; path = libs/kz.client.a; sourceTree = "<group>"; };
+		42FFB5BB19B69A9F0024FD0D /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		42FFB5BC19B69A9F0024FD0D /* CrashReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrashReporter.h; sourceTree = "<group>"; };
+		42FFB5BD19B69A9F0024FD0D /* dwarf_opstream.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = dwarf_opstream.hpp; sourceTree = "<group>"; };
+		42FFB5BE19B69A9F0024FD0D /* dwarf_stack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = dwarf_stack.hpp; sourceTree = "<group>"; };
+		42FFB5BF19B69A9F0024FD0D /* KZADFSIdentityProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZADFSIdentityProvider.h; sourceTree = "<group>"; };
+		42FFB5C019B69A9F0024FD0D /* KZApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZApplication.h; sourceTree = "<group>"; };
+		42FFB5C119B69A9F0024FD0D /* KZApplicationConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZApplicationConfiguration.h; sourceTree = "<group>"; };
+		42FFB5C219B69A9F0024FD0D /* KZApplicationServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZApplicationServices.h; sourceTree = "<group>"; };
+		42FFB5C319B69A9F0024FD0D /* KZAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZAuthentication.h; sourceTree = "<group>"; };
+		42FFB5C419B69A9F0024FD0D /* KZAuthenticationConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZAuthenticationConfig.h; sourceTree = "<group>"; };
+		42FFB5C519B69A9F0024FD0D /* KZBaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZBaseService.h; sourceTree = "<group>"; };
+		42FFB5C619B69A9F0024FD0D /* KZConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZConfiguration.h; sourceTree = "<group>"; };
+		42FFB5C719B69A9F0024FD0D /* KZConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZConstants.h; sourceTree = "<group>"; };
+		42FFB5C819B69A9F0024FD0D /* KZCrashReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZCrashReporter.h; sourceTree = "<group>"; };
+		42FFB5C919B69A9F0024FD0D /* KZDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZDatasource.h; sourceTree = "<group>"; };
+		42FFB5CA19B69A9F0024FD0D /* KZIdentityProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZIdentityProvider.h; sourceTree = "<group>"; };
+		42FFB5CB19B69A9F0024FD0D /* KZIdentityProviderFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZIdentityProviderFactory.h; sourceTree = "<group>"; };
+		42FFB5CC19B69A9F0024FD0D /* KZLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZLogging.h; sourceTree = "<group>"; };
+		42FFB5CD19B69A9F0024FD0D /* KZMail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZMail.h; sourceTree = "<group>"; };
+		42FFB5CE19B69A9F0024FD0D /* KZNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZNotification.h; sourceTree = "<group>"; };
+		42FFB5CF19B69A9F0024FD0D /* KZObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZObject.h; sourceTree = "<group>"; };
+		42FFB5D019B69A9F0024FD0D /* KZPassiveAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZPassiveAuthViewController.h; sourceTree = "<group>"; };
+		42FFB5D119B69A9F0024FD0D /* KZPubSubChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZPubSubChannel.h; sourceTree = "<group>"; };
+		42FFB5D219B69A9F0024FD0D /* KZQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZQueue.h; sourceTree = "<group>"; };
+		42FFB5D319B69A9F0024FD0D /* KZResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZResponse.h; sourceTree = "<group>"; };
+		42FFB5D419B69A9F0024FD0D /* KZSecurityConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZSecurityConfiguration.h; sourceTree = "<group>"; };
+		42FFB5D519B69A9F0024FD0D /* KZService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZService.h; sourceTree = "<group>"; };
+		42FFB5D619B69A9F0024FD0D /* KZSMSSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZSMSSender.h; sourceTree = "<group>"; };
+		42FFB5D719B69A9F0024FD0D /* KZStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZStorage.h; sourceTree = "<group>"; };
+		42FFB5D819B69A9F0024FD0D /* KZStorageMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZStorageMetadata.h; sourceTree = "<group>"; };
+		42FFB5D919B69A9F0024FD0D /* KZTokenController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZTokenController.h; sourceTree = "<group>"; };
+		42FFB5DA19B69A9F0024FD0D /* KZUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZUser.h; sourceTree = "<group>"; };
+		42FFB5DB19B69A9F0024FD0D /* KZWRAPv09IdentityProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZWRAPv09IdentityProvider.h; sourceTree = "<group>"; };
+		42FFB5DC19B69A9F0024FD0D /* NSData+Conversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Conversion.h"; sourceTree = "<group>"; };
+		42FFB5DD19B69A9F0024FD0D /* NSDictionary+JSONCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JSONCategories.h"; sourceTree = "<group>"; };
+		42FFB5DE19B69A9F0024FD0D /* NSDictionary+Mongo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Mongo.h"; sourceTree = "<group>"; };
+		42FFB5DF19B69A9F0024FD0D /* NSString+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Utilities.h"; sourceTree = "<group>"; };
+		42FFB5E019B69A9F0024FD0D /* PLCrashAsyncCompactUnwindEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashAsyncCompactUnwindEncoding.h; sourceTree = "<group>"; };
+		42FFB5E119B69A9F0024FD0D /* PLCrashAsyncDwarfCFAState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PLCrashAsyncDwarfCFAState.hpp; sourceTree = "<group>"; };
+		42FFB5E219B69A9F0024FD0D /* PLCrashAsyncDwarfExpression.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PLCrashAsyncDwarfExpression.hpp; sourceTree = "<group>"; };
+		42FFB5E319B69A9F0024FD0D /* PLCrashAsyncDwarfFDE.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PLCrashAsyncDwarfFDE.hpp; sourceTree = "<group>"; };
+		42FFB5E419B69A9F0024FD0D /* PLCrashAsyncImageList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashAsyncImageList.h; sourceTree = "<group>"; };
+		42FFB5E519B69A9F0024FD0D /* PLCrashAsyncLinkedList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PLCrashAsyncLinkedList.hpp; sourceTree = "<group>"; };
+		42FFB5E619B69A9F0024FD0D /* PLCrashAsyncSignalInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashAsyncSignalInfo.h; sourceTree = "<group>"; };
+		42FFB5E719B69A9F0024FD0D /* PLCrashAsyncThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashAsyncThread.h; sourceTree = "<group>"; };
+		42FFB5E819B69A9F0024FD0D /* PLCrashFeatureConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashFeatureConfig.h; sourceTree = "<group>"; };
+		42FFB5E919B69A9F0024FD0D /* PLCrashFrameDWARFUnwind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashFrameDWARFUnwind.h; sourceTree = "<group>"; };
+		42FFB5EA19B69A9F0024FD0D /* PLCrashFrameStackUnwind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashFrameStackUnwind.h; sourceTree = "<group>"; };
+		42FFB5EB19B69A9F0024FD0D /* PLCrashHostInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashHostInfo.h; sourceTree = "<group>"; };
+		42FFB5EC19B69A9F0024FD0D /* PLCrashLogWriterEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashLogWriterEncoding.h; sourceTree = "<group>"; };
+		42FFB5ED19B69A9F0024FD0D /* PLCrashMachExceptionPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashMachExceptionPort.h; sourceTree = "<group>"; };
+		42FFB5EE19B69A9F0024FD0D /* PLCrashMachExceptionPortSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashMachExceptionPortSet.h; sourceTree = "<group>"; };
+		42FFB5EF19B69A9F0024FD0D /* PLCrashMachExceptionServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashMachExceptionServer.h; sourceTree = "<group>"; };
+		42FFB5F019B69A9F0024FD0D /* PLCrashNamespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashNamespace.h; sourceTree = "<group>"; };
+		42FFB5F119B69A9F0024FD0D /* PLCrashProcessInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashProcessInfo.h; sourceTree = "<group>"; };
+		42FFB5F219B69A9F0024FD0D /* PLCrashReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashReport.h; sourceTree = "<group>"; };
+		42FFB5F319B69A9F0024FD0D /* PLCrashReportApplicationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashReportApplicationInfo.h; sourceTree = "<group>"; };
+		42FFB5F419B69A9F0024FD0D /* PLCrashReportBinaryImageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashReportBinaryImageInfo.h; sourceTree = "<group>"; };
+		42FFB5F519B69A9F0024FD0D /* PLCrashReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashReporter.h; sourceTree = "<group>"; };
+		42FFB5F619B69A9F0024FD0D /* PLCrashReporterConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashReporterConfig.h; sourceTree = "<group>"; };
+		42FFB5F719B69A9F0024FD0D /* PLCrashReporterNSError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashReporterNSError.h; sourceTree = "<group>"; };
+		42FFB5F819B69A9F0024FD0D /* PLCrashReportExceptionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashReportExceptionInfo.h; sourceTree = "<group>"; };
+		42FFB5F919B69A9F0024FD0D /* PLCrashReportFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashReportFormatter.h; sourceTree = "<group>"; };
+		42FFB5FA19B69A9F0024FD0D /* PLCrashReportMachExceptionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashReportMachExceptionInfo.h; sourceTree = "<group>"; };
+		42FFB5FB19B69A9F0024FD0D /* PLCrashReportMachineInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashReportMachineInfo.h; sourceTree = "<group>"; };
+		42FFB5FC19B69A9F0024FD0D /* PLCrashReportProcessInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashReportProcessInfo.h; sourceTree = "<group>"; };
+		42FFB5FD19B69A9F0024FD0D /* PLCrashReportProcessorInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashReportProcessorInfo.h; sourceTree = "<group>"; };
+		42FFB5FE19B69A9F0024FD0D /* PLCrashReportRegisterInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashReportRegisterInfo.h; sourceTree = "<group>"; };
+		42FFB5FF19B69A9F0024FD0D /* PLCrashReportSignalInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashReportSignalInfo.h; sourceTree = "<group>"; };
+		42FFB60019B69A9F0024FD0D /* PLCrashReportStackFrameInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashReportStackFrameInfo.h; sourceTree = "<group>"; };
+		42FFB60119B69A9F0024FD0D /* PLCrashReportSymbolInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashReportSymbolInfo.h; sourceTree = "<group>"; };
+		42FFB60219B69A9F0024FD0D /* PLCrashReportSystemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashReportSystemInfo.h; sourceTree = "<group>"; };
+		42FFB60319B69A9F0024FD0D /* PLCrashReportTextFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashReportTextFormatter.h; sourceTree = "<group>"; };
+		42FFB60419B69A9F0024FD0D /* PLCrashReportThreadInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashReportThreadInfo.h; sourceTree = "<group>"; };
+		42FFB60519B69A9F0024FD0D /* PLCrashSysctl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashSysctl.h; sourceTree = "<group>"; };
+		42FFB60619B69A9F0024FD0D /* PLCrashUncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashUncaughtExceptionHandler.h; sourceTree = "<group>"; };
+		42FFB60719B69A9F0024FD0D /* Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Query.h; sourceTree = "<group>"; };
+		42FFB60819B69A9F0024FD0D /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
+		42FFB60919B69A9F0024FD0D /* SVHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVHTTPClient.h; sourceTree = "<group>"; };
+		42FFB60A19B69A9F0024FD0D /* SVHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVHTTPRequest.h; sourceTree = "<group>"; };
+		BC3EE1F91A2E4D71008D86B7 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		BC3EE1FB1A2E4DD7008D86B7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		BC3EE1FD1A2E4DFF008D86B7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BC3EE1FF1A2E4E0F008D86B7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BC3EE2011A2E4E28008D86B7 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		429926D71962294700EEC798 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC3EE2021A2E4E28008D86B7 /* libz.dylib in Frameworks */,
+				BC3EE2001A2E4E0F008D86B7 /* SystemConfiguration.framework in Frameworks */,
+				BC3EE1FE1A2E4DFF008D86B7 /* CoreLocation.framework in Frameworks */,
+				BC3EE1FC1A2E4DD7008D86B7 /* CFNetwork.framework in Frameworks */,
+				BC3EE1FA1A2E4D71008D86B7 /* CoreTelephony.framework in Frameworks */,
+				42117FF81A223F5500F8137A /* MapKit.framework in Frameworks */,
+				4214A33F19B9372A00FFB8AF /* CoreImage.framework in Frameworks */,
+				421E31EF19B6FCB100F4B033 /* QuartzCore.framework in Frameworks */,
+				42BCB85319642E7F00D8EC4B /* kz.client.a in Frameworks */,
+				4299271119622A2900EEC798 /* libicucore.dylib in Frameworks */,
+				4299270F19622A1100EEC798 /* libc++.dylib in Frameworks */,
+				429926E01962294700EEC798 /* CoreGraphics.framework in Frameworks */,
+				429926E21962294700EEC798 /* UIKit.framework in Frameworks */,
+				429926DE1962294700EEC798 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		429926D11962294700EEC798 = {
+			isa = PBXGroup;
+			children = (
+				429926E31962294700EEC798 /* Vendors */,
+				429926DC1962294700EEC798 /* Frameworks */,
+				429926DB1962294700EEC798 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		429926DB1962294700EEC798 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				429926DA1962294700EEC798 /* Vendors.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		429926DC1962294700EEC798 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC3EE2011A2E4E28008D86B7 /* libz.dylib */,
+				BC3EE1FF1A2E4E0F008D86B7 /* SystemConfiguration.framework */,
+				BC3EE1FD1A2E4DFF008D86B7 /* CoreLocation.framework */,
+				BC3EE1FB1A2E4DD7008D86B7 /* CFNetwork.framework */,
+				BC3EE1F91A2E4D71008D86B7 /* CoreTelephony.framework */,
+				42117FF71A223F5500F8137A /* MapKit.framework */,
+				4214A33E19B9372A00FFB8AF /* CoreImage.framework */,
+				421E31EE19B6FCB100F4B033 /* QuartzCore.framework */,
+				42FFB5BA19B69A9F0024FD0D /* include */,
+				42BCB85219642E7F00D8EC4B /* kz.client.a */,
+				4299271019622A2900EEC798 /* libicucore.dylib */,
+				4299270E19622A1100EEC798 /* libc++.dylib */,
+				429926DD1962294700EEC798 /* Foundation.framework */,
+				429926DF1962294700EEC798 /* CoreGraphics.framework */,
+				429926E11962294700EEC798 /* UIKit.framework */,
+				429926F61962294700EEC798 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		429926E31962294700EEC798 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				42204C2C1A093BE600C07F76 /* Colors.h */,
+				42204C2D1A093BE600C07F76 /* Colors.m */,
+				429926EC1962294700EEC798 /* AppDelegate.h */,
+				429926ED1962294700EEC798 /* AppDelegate.m */,
+				4299271219622B7A00EEC798 /* KZConnectionManager.h */,
+				4299271319622B7A00EEC798 /* KZConnectionManager.m */,
+				421E31EB19B6EC8D00F4B033 /* KZVendorViewController.h */,
+				421E31EC19B6EC8D00F4B033 /* KZVendorViewController.m */,
+				429324EA19B6A58B00F99A8A /* KZLoginViewController.h */,
+				429324EB19B6A58B00F99A8A /* KZLoginViewController.m */,
+				429926EF1962294700EEC798 /* Images.xcassets */,
+				429926E41962294700EEC798 /* Supporting Files */,
+			);
+			name = Vendors;
+			path = KidoZenBlankProject;
+			sourceTree = "<group>";
+		};
+		429926E41962294700EEC798 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				429926E51962294700EEC798 /* Vendors-Info.plist */,
+				429926E61962294700EEC798 /* InfoPlist.strings */,
+				429926E91962294700EEC798 /* main.m */,
+				429926EB1962294700EEC798 /* Vendors-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		42FFB5BA19B69A9F0024FD0D /* include */ = {
+			isa = PBXGroup;
+			children = (
+				42FFB5BB19B69A9F0024FD0D /* Base64.h */,
+				42FFB5BC19B69A9F0024FD0D /* CrashReporter.h */,
+				42FFB5BD19B69A9F0024FD0D /* dwarf_opstream.hpp */,
+				42FFB5BE19B69A9F0024FD0D /* dwarf_stack.hpp */,
+				42FFB5BF19B69A9F0024FD0D /* KZADFSIdentityProvider.h */,
+				42FFB5C019B69A9F0024FD0D /* KZApplication.h */,
+				42FFB5C119B69A9F0024FD0D /* KZApplicationConfiguration.h */,
+				42FFB5C219B69A9F0024FD0D /* KZApplicationServices.h */,
+				42FFB5C319B69A9F0024FD0D /* KZAuthentication.h */,
+				42FFB5C419B69A9F0024FD0D /* KZAuthenticationConfig.h */,
+				42FFB5C519B69A9F0024FD0D /* KZBaseService.h */,
+				42FFB5C619B69A9F0024FD0D /* KZConfiguration.h */,
+				42FFB5C719B69A9F0024FD0D /* KZConstants.h */,
+				42FFB5C819B69A9F0024FD0D /* KZCrashReporter.h */,
+				42FFB5C919B69A9F0024FD0D /* KZDatasource.h */,
+				42FFB5CA19B69A9F0024FD0D /* KZIdentityProvider.h */,
+				42FFB5CB19B69A9F0024FD0D /* KZIdentityProviderFactory.h */,
+				42FFB5CC19B69A9F0024FD0D /* KZLogging.h */,
+				42FFB5CD19B69A9F0024FD0D /* KZMail.h */,
+				42FFB5CE19B69A9F0024FD0D /* KZNotification.h */,
+				42FFB5CF19B69A9F0024FD0D /* KZObject.h */,
+				42FFB5D019B69A9F0024FD0D /* KZPassiveAuthViewController.h */,
+				42FFB5D119B69A9F0024FD0D /* KZPubSubChannel.h */,
+				42FFB5D219B69A9F0024FD0D /* KZQueue.h */,
+				42FFB5D319B69A9F0024FD0D /* KZResponse.h */,
+				42FFB5D419B69A9F0024FD0D /* KZSecurityConfiguration.h */,
+				42FFB5D519B69A9F0024FD0D /* KZService.h */,
+				42FFB5D619B69A9F0024FD0D /* KZSMSSender.h */,
+				42FFB5D719B69A9F0024FD0D /* KZStorage.h */,
+				42FFB5D819B69A9F0024FD0D /* KZStorageMetadata.h */,
+				42FFB5D919B69A9F0024FD0D /* KZTokenController.h */,
+				42FFB5DA19B69A9F0024FD0D /* KZUser.h */,
+				42FFB5DB19B69A9F0024FD0D /* KZWRAPv09IdentityProvider.h */,
+				42FFB5DC19B69A9F0024FD0D /* NSData+Conversion.h */,
+				42FFB5DD19B69A9F0024FD0D /* NSDictionary+JSONCategories.h */,
+				42FFB5DE19B69A9F0024FD0D /* NSDictionary+Mongo.h */,
+				42FFB5DF19B69A9F0024FD0D /* NSString+Utilities.h */,
+				42FFB5E019B69A9F0024FD0D /* PLCrashAsyncCompactUnwindEncoding.h */,
+				42FFB5E119B69A9F0024FD0D /* PLCrashAsyncDwarfCFAState.hpp */,
+				42FFB5E219B69A9F0024FD0D /* PLCrashAsyncDwarfExpression.hpp */,
+				42FFB5E319B69A9F0024FD0D /* PLCrashAsyncDwarfFDE.hpp */,
+				42FFB5E419B69A9F0024FD0D /* PLCrashAsyncImageList.h */,
+				42FFB5E519B69A9F0024FD0D /* PLCrashAsyncLinkedList.hpp */,
+				42FFB5E619B69A9F0024FD0D /* PLCrashAsyncSignalInfo.h */,
+				42FFB5E719B69A9F0024FD0D /* PLCrashAsyncThread.h */,
+				42FFB5E819B69A9F0024FD0D /* PLCrashFeatureConfig.h */,
+				42FFB5E919B69A9F0024FD0D /* PLCrashFrameDWARFUnwind.h */,
+				42FFB5EA19B69A9F0024FD0D /* PLCrashFrameStackUnwind.h */,
+				42FFB5EB19B69A9F0024FD0D /* PLCrashHostInfo.h */,
+				42FFB5EC19B69A9F0024FD0D /* PLCrashLogWriterEncoding.h */,
+				42FFB5ED19B69A9F0024FD0D /* PLCrashMachExceptionPort.h */,
+				42FFB5EE19B69A9F0024FD0D /* PLCrashMachExceptionPortSet.h */,
+				42FFB5EF19B69A9F0024FD0D /* PLCrashMachExceptionServer.h */,
+				42FFB5F019B69A9F0024FD0D /* PLCrashNamespace.h */,
+				42FFB5F119B69A9F0024FD0D /* PLCrashProcessInfo.h */,
+				42FFB5F219B69A9F0024FD0D /* PLCrashReport.h */,
+				42FFB5F319B69A9F0024FD0D /* PLCrashReportApplicationInfo.h */,
+				42FFB5F419B69A9F0024FD0D /* PLCrashReportBinaryImageInfo.h */,
+				42FFB5F519B69A9F0024FD0D /* PLCrashReporter.h */,
+				42FFB5F619B69A9F0024FD0D /* PLCrashReporterConfig.h */,
+				42FFB5F719B69A9F0024FD0D /* PLCrashReporterNSError.h */,
+				42FFB5F819B69A9F0024FD0D /* PLCrashReportExceptionInfo.h */,
+				42FFB5F919B69A9F0024FD0D /* PLCrashReportFormatter.h */,
+				42FFB5FA19B69A9F0024FD0D /* PLCrashReportMachExceptionInfo.h */,
+				42FFB5FB19B69A9F0024FD0D /* PLCrashReportMachineInfo.h */,
+				42FFB5FC19B69A9F0024FD0D /* PLCrashReportProcessInfo.h */,
+				42FFB5FD19B69A9F0024FD0D /* PLCrashReportProcessorInfo.h */,
+				42FFB5FE19B69A9F0024FD0D /* PLCrashReportRegisterInfo.h */,
+				42FFB5FF19B69A9F0024FD0D /* PLCrashReportSignalInfo.h */,
+				42FFB60019B69A9F0024FD0D /* PLCrashReportStackFrameInfo.h */,
+				42FFB60119B69A9F0024FD0D /* PLCrashReportSymbolInfo.h */,
+				42FFB60219B69A9F0024FD0D /* PLCrashReportSystemInfo.h */,
+				42FFB60319B69A9F0024FD0D /* PLCrashReportTextFormatter.h */,
+				42FFB60419B69A9F0024FD0D /* PLCrashReportThreadInfo.h */,
+				42FFB60519B69A9F0024FD0D /* PLCrashSysctl.h */,
+				42FFB60619B69A9F0024FD0D /* PLCrashUncaughtExceptionHandler.h */,
+				42FFB60719B69A9F0024FD0D /* Query.h */,
+				42FFB60819B69A9F0024FD0D /* SRWebSocket.h */,
+				42FFB60919B69A9F0024FD0D /* SVHTTPClient.h */,
+				42FFB60A19B69A9F0024FD0D /* SVHTTPRequest.h */,
+			);
+			name = include;
+			path = libs/include;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		429926D91962294700EEC798 /* Vendors */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 429927061962294700EEC798 /* Build configuration list for PBXNativeTarget "Vendors" */;
+			buildPhases = (
+				429926D61962294700EEC798 /* Sources */,
+				429926D71962294700EEC798 /* Frameworks */,
+				429926D81962294700EEC798 /* Resources */,
+				BC3EE2031A2E7479008D86B7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Vendors;
+			productName = KidoZenBlankProject;
+			productReference = 429926DA1962294700EEC798 /* Vendors.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		429926D21962294700EEC798 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = KidoZen;
+				TargetAttributes = {
+					429926D91962294700EEC798 = {
+						DevelopmentTeam = AH6FMFPPV3;
+					};
+				};
+			};
+			buildConfigurationList = 429926D51962294700EEC798 /* Build configuration list for PBXProject "Vendors" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 429926D11962294700EEC798;
+			productRefGroup = 429926DB1962294700EEC798 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				429926D91962294700EEC798 /* Vendors */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		429926D81962294700EEC798 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				429926E81962294700EEC798 /* InfoPlist.strings in Resources */,
+				429926F01962294700EEC798 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BC3EE2031A2E7479008D86B7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=$PATH:/usr/local/sbin:/usr/local/bin\nexport NODE_PATH=\"/usr/local/lib/node_modules/\"\n\n\nUPLOAD_DSYM=true # If you want to disable dSYM Uploading, set this to false\nUPLOAD_ONLY_IN_RELEASE=false #If you want to also upload when in Debug mode, set this to false\n\nDSYM_FILE_PATH=${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}\nAPPNAME=\"msdynamimcs\"\nAPP_CENTER_URL=\"https://public.kidocloud.com\"\n\nif [ \"$UPLOAD_DSYM\" == true ]; then\nif [ \"YOUR_APP_NAME_HERE\" == \"${APPNAME}\" ]; then\n\necho \"warning: Please add the application name. It's the one in the application center url.\"\n\nelif [ \"APP_CENTER_URL\" == \"${APP_CENTER_URL}\" ]; then\n\necho \"warning: Please add your app center url.\"\n\nelif [ \"Release\" == \"${CONFIGURATION}\" ] || [ \"$UPLOAD_ONLY_IN_RELEASE\" == false ]; then\n\necho \"Remember to run kido hosting ${APP_CENTER_URL} in a terminal so that kido command can upload the dSYM file.\"\necho \"Please refer to http://docs.kidozen.com/ios-and-android-crash-reports/#Uploading-iOS-symbols for complete documentation.\"\n\nkido app-crash $DSYM_FILE_PATH $APPNAME $APP_CENTER_URL\nfi\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		429926D61962294700EEC798 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				429926EE1962294700EEC798 /* AppDelegate.m in Sources */,
+				4299271419622B7A00EEC798 /* KZConnectionManager.m in Sources */,
+				429926EA1962294700EEC798 /* main.m in Sources */,
+				42204C2E1A093BE600C07F76 /* Colors.m in Sources */,
+				429324EC19B6A58B00F99A8A /* KZLoginViewController.m in Sources */,
+				421E31ED19B6EC8D00F4B033 /* KZVendorViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		429926E61962294700EEC798 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				429926E71962294700EEC798 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		429927041962294700EEC798 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PROVISIONING_PROFILE = "5c8756bb-ee1b-469a-9ad7-fcfb931de7ec";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		429927051962294700EEC798 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PROVISIONING_PROFILE = "5c8756bb-ee1b-469a-9ad7-fcfb931de7ec";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		429927071962294700EEC798 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KidoZenBlankProject/Vendors-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/libs/**",
+				);
+				INFOPLIST_FILE = "KidoZenBlankProject/Vendors-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs/**",
+					"$(PROJECT_DIR)/libs",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = Vendors;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		429927081962294700EEC798 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KidoZenBlankProject/Vendors-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/libs/**",
+				);
+				INFOPLIST_FILE = "KidoZenBlankProject/Vendors-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs/**",
+					"$(PROJECT_DIR)/libs",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = Vendors;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		429926D51962294700EEC798 /* Build configuration list for PBXProject "Vendors" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				429927041962294700EEC798 /* Debug */,
+				429927051962294700EEC798 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		429927061962294700EEC798 /* Build configuration list for PBXNativeTarget "Vendors" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				429927071962294700EEC798 /* Debug */,
+				429927081962294700EEC798 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 429926D21962294700EEC798 /* Project object */;
+}
