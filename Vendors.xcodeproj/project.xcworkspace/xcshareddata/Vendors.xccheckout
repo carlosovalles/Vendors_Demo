@@ -14,22 +14,26 @@
 		<string>https://github.com/carlosovalles/MSDynamics_Vendors.git</string>
 		<key>44609F59D8D3BE432F4A10CD99024B559A7CE1C4</key>
 		<string>https://github.com/carlosovalles/Vendors.git</string>
+		<key>4A07BBE3B833F166CAF972E35E5F172E17376941</key>
+		<string>https://github.com/carlosovalles/Vendors_Demo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Vendors.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0C19AFAA81016A32FFD8609837CF5D0A162EA819</key>
-		<string>../..</string>
+		<string>../../../MSDynamics</string>
 		<key>44609F59D8D3BE432F4A10CD99024B559A7CE1C4</key>
 		<string>../../../Vendors</string>
+		<key>4A07BBE3B833F166CAF972E35E5F172E17376941</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/carlosovalles/MSDynamics_Vendors.git</string>
+	<string>https://github.com/carlosovalles/Vendors_Demo.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>0C19AFAA81016A32FFD8609837CF5D0A162EA819</string>
+	<string>4A07BBE3B833F166CAF972E35E5F172E17376941</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -47,6 +51,14 @@
 			<string>44609F59D8D3BE432F4A10CD99024B559A7CE1C4</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Vendors</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4A07BBE3B833F166CAF972E35E5F172E17376941</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Vendors_Demo</string>
 		</dict>
 	</array>
 </dict>
