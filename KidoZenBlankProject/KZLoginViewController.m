@@ -52,7 +52,7 @@
 - (IBAction)authUser:(id)sender{
     
     
-    // Activity indicator to show UI element while waiting for user authentication server-responce.
+    // Activity indicator to show UI element while waiting for user authentication server-response.
     UIActivityIndicatorView * waitingGear = [[UIActivityIndicatorView alloc]initWithFrame:self.view.bounds];
     [waitingGear startAnimating];
     [waitingGear setBackgroundColor:[UIColor colorWithWhite:0 alpha:.7]];

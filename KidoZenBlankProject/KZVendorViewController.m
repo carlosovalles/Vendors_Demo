@@ -18,7 +18,6 @@ static NSString * const cellReuseId = @"cellReuseId";
 
 @interface KZVendorViewController () <UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,MKMapViewDelegate>
 @property (nonatomic,strong) UITableView * tableView;
-@property (nonatomic,strong) UIImageView * azIcon;
 @property (nonatomic,strong) NSMutableArray * vendorsDataSource;
 @property (nonatomic,strong) UIButton * createNewContact;
 @property (nonatomic,retain) UITextField *contactName;
@@ -55,7 +54,6 @@ static NSString * const cellReuseId = @"cellReuseId";
 //    Weather Label
     
     _weatherCityLbl = [[UILabel alloc] initWithFrame:CGRectMake(10, 40, 60, 30)];
-
     _weatherCityLbl.font =[UIFont fontWithName:@"HelveticaNeue-Medium" size:11];
     _weatherCityLbl.text = @"City, --";
     _weatherCityLbl.backgroundColor = [UIColor clearColor];
@@ -63,7 +61,6 @@ static NSString * const cellReuseId = @"cellReuseId";
     
 
     _weatherLbl = [[UILabel alloc] initWithFrame:CGRectMake(10, 20, 60, 30)];
-    //    weatherLbl.text = [NSString stringWithFormat:@"telephone: %@", [[[r.response objectForKey:@"data"] objectAtIndex:0] objectForKey:@"phoneNumber"]];
     _weatherLbl.font =[UIFont fontWithName:@"HelveticaNeue-Medium" size:20];
     _weatherLbl.text = @"--℉";
     _weatherLbl.backgroundColor = [UIColor clearColor];
@@ -82,21 +79,25 @@ static NSString * const cellReuseId = @"cellReuseId";
     [_createNewContact setFrame:CGRectMake(272, 19, 40, 40)];
 
     
-   
+    /*********************************************************************************
+     Query DataSource:  getContacts
+     Service:           MicroSoft Dynamics CRM (on-Premise)
+     *********************************************************************************/
+    
     
     KZDatasource *ds = [[[KZConnectionManager sharedKZConnectionManager] kzResponse].application DataSourceWithName:@"getContacts"];
-    
     [ds Query:^(KZResponse *r) {
         NSLog(@"Response: %@",r.response);
         if ([[r.response objectForKey:@"data"] count] > 0){
-        
             _vendorsDataSource = (NSMutableArray*)[[[r.response objectForKey:@"data"] reverseObjectEnumerator] allObjects];
-
             [self setUpVendorTableView];
         }
-        
     }];
 
+    /*********************************************************************************
+     Query DataSource:  getContacts
+     Service:           SOAP Public Weather Service: http://wsf.cdyne.com/WeatherWS/Weather.asmx?WSDL
+     *********************************************************************************/
     
     KZDatasource *weatherDS = [[[KZConnectionManager sharedKZConnectionManager] kzResponse].application DataSourceWithName:@"getCityWeatherByZIP"];
     NSString *jsonString = @"{\"ZipCode\":\"10001\"}";
@@ -120,8 +121,16 @@ static NSString * const cellReuseId = @"cellReuseId";
     //NSString * tmpstring = [tmpArray objectAtIndex:1];
 
     
+    /*********************************************************************************
+     Loggin Service:  Show DataViz
+     *********************************************************************************/
     [[[KZConnectionManager sharedKZConnectionManager] kzResponse].application  tagClick:@"Show DataViz"];
     
+    
+    
+    /*********************************************************************************
+     DataVisualization:  Show sample representations of Data visualizations.
+     *********************************************************************************/
     [[[KZConnectionManager sharedKZConnectionManager] kzResponse].application showDataVisualizationWithName:@"MySampleVisualization100" success:^{
             // Success code.
         } error:^(NSError *error) {
@@ -130,23 +139,6 @@ static NSString * const cellReuseId = @"cellReuseId";
 
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-}
-
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
-
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-//    [self.navController.view addSubview:_azIcon];
-    [self.navController.view addSubview:_weatherLbl];
-        [self.navController.view addSubview:_weatherCityLbl];
-    [self.navController.view addSubview:_createNewContact];
-}
 
 - (void) setUpVendorTableView{
     if (!_tableView)
@@ -356,6 +348,11 @@ static NSString * const cellReuseId = @"cellReuseId";
 }
 
 
+
+/*********************************************************************************
+ Add New Contact Function:
+ *********************************************************************************/
+
 - (void) addNewContact{
     
     if (!_addContactView) {
@@ -422,7 +419,13 @@ static NSString * const cellReuseId = @"cellReuseId";
     return YES;
 }
 
+
 - (void) postNewContact{
+    
+    /*********************************************************************************
+     Invoke DataSource: dynamicsCreateContact with expected Last and First Name
+     Service: MS Dynamics CRM
+     *********************************************************************************/
     
     KZDatasource *dynamicsCreateContact = [[[KZConnectionManager sharedKZConnectionManager] kzResponse].application DataSourceWithName:@"dynamicsCreateContact"];
     
@@ -443,6 +446,11 @@ static NSString * const cellReuseId = @"cellReuseId";
             [_tableView reloadData];
         }];
         
+        
+        /*********************************************************************************
+         Invoke DataSource: insertDynamicsExtraInfo with expected parameters
+         Service: MySQL (on-Premise)
+         *********************************************************************************/
         KZDatasource *postMySQL = [[[KZConnectionManager sharedKZConnectionManager] kzResponse].application DataSourceWithName:@"insertDynamicsExtraInfo"];
         NSString *jsonString =
         [NSString stringWithFormat:@"{\"id\":\"%@\",\"lat\":\"25.7617\",\"long\":\"-80.1881\",\"phone\":\"+1 (305) 555 - 5555\",\"email\":\"%@.%@@email.com\",\"moreInfo\":\"Whatever Text you want to pass here\"}",[[[r.response objectForKey:@"data"]objectForKey:@"CreateResponse"] objectForKey:@"CreateResult"],[_contactName.text lowercaseString],[_contactLastName.text lowercaseString]];
@@ -456,11 +464,25 @@ static NSString * const cellReuseId = @"cellReuseId";
 
 
     }];
-    
-    
-    
-    
 }
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navController.view addSubview:_weatherLbl];
+    [self.navController.view addSubview:_weatherCityLbl];
+    [self.navController.view addSubview:_createNewContact];
+}
+
 
 
 @end

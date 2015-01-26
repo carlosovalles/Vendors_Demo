@@ -52,6 +52,8 @@
 
     /*********************************************************************************
      STEP 1: Create Application object and initial handshake with KidoZen Platform
+     self.kzApp will be the 
+     
      *********************************************************************************/
     self.kzApp = [[KZApplication alloc] initWithTenantMarketPlace:KidoZenAppCenterUrl
                                                   applicationName:KidoZenAppName
@@ -70,7 +72,7 @@
                                                                ***************************************/
                                                               [self.kzApp enableAnalytics];
                                                               
-                                                              // Delegating back the application object as a responce.
+                                                              // Delegating back the application object as a response.
                                                               [self conectionSuccessfulWithResponse:response];
                                                               
                                                           }else {
@@ -84,7 +86,7 @@
 
 - (void)conectionSuccessfulWithResponse:(KZResponse*)response{
     
-    
+    // _kzResponse
     _kzResponse = response;
     
     if ([delegate respondsToSelector:@selector(conectionSuccessfulWithResponse:)])
