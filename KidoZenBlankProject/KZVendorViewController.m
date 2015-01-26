@@ -95,7 +95,7 @@ static NSString * const cellReuseId = @"cellReuseId";
     }];
 
     /*********************************************************************************
-     Query DataSource:  getContacts
+     Query DataSource:  getCityWeatherByZIP
      Service:           SOAP Public Weather Service: http://wsf.cdyne.com/WeatherWS/Weather.asmx?WSDL
      *********************************************************************************/
     
@@ -116,7 +116,7 @@ static NSString * const cellReuseId = @"cellReuseId";
 
 - (void) showDataViz{
     
-    //Throw Array Out of bounds:
+    // Crash Reports Sample :  Throw Array Out of bounds
     //NSArray * tmpArray = [[NSArray alloc]initWithObjects:@"TEST", nil];
     //NSString * tmpstring = [tmpArray objectAtIndex:1];
 
