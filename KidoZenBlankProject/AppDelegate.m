@@ -15,13 +15,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
     
-    KZLoginViewController *login = [[KZLoginViewController alloc]init];
+    // Launching Login View Controller.
+    KZLoginViewController *login = [[KZLoginViewController alloc]initWithNibName:@"KZLoginViewController" bundle:nil];
     self.window.rootViewController = login;
-    
-
-    
     [self.window makeKeyAndVisible];
     return YES;
 }

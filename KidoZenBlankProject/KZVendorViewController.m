@@ -82,10 +82,9 @@ static NSString * const cellReuseId = @"cellReuseId";
     [_createNewContact setFrame:CGRectMake(272, 19, 40, 40)];
 
     
+   
     
-    
-    
-    KZDatasource *ds = [[[KZConnectionManager sharedKZConnectionManager] kzResponse].application DataSourceWithName:@"dynamicsGetContacts2"];
+    KZDatasource *ds = [[[KZConnectionManager sharedKZConnectionManager] kzResponse].application DataSourceWithName:@"getContacts"];
     
     [ds Query:^(KZResponse *r) {
         NSLog(@"Response: %@",r.response);
@@ -116,9 +115,14 @@ static NSString * const cellReuseId = @"cellReuseId";
 
 - (void) showDataViz{
     
+    //Throw Array Out of bounds:
+    //NSArray * tmpArray = [[NSArray alloc]initWithObjects:@"TEST", nil];
+    //NSString * tmpstring = [tmpArray objectAtIndex:1];
+
+    
     [[[KZConnectionManager sharedKZConnectionManager] kzResponse].application  tagClick:@"Show DataViz"];
     
-    [[[KZConnectionManager sharedKZConnectionManager] kzResponse].application showDataVisualizationWithName:@"myProductsViz" success:^{
+    [[[KZConnectionManager sharedKZConnectionManager] kzResponse].application showDataVisualizationWithName:@"MySampleVisualization100" success:^{
             // Success code.
         } error:^(NSError *error) {
             // Handle error as you like.
@@ -433,7 +437,7 @@ static NSString * const cellReuseId = @"cellReuseId";
         _addContactView = nil;
         [_contactName resignFirstResponder];
         
-        KZDatasource *dynamicsGetContacts = [[[KZConnectionManager sharedKZConnectionManager] kzResponse].application DataSourceWithName:@"dynamicsGetContacts2"];
+        KZDatasource *dynamicsGetContacts = [[[KZConnectionManager sharedKZConnectionManager] kzResponse].application DataSourceWithName:@"getContacts"];
         [dynamicsGetContacts Query:^(KZResponse *r) {
             _vendorsDataSource = (NSMutableArray*)[[[r.response objectForKey:@"data"] reverseObjectEnumerator] allObjects];
             [_tableView reloadData];

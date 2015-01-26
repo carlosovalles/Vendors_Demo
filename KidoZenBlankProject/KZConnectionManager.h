@@ -20,6 +20,6 @@
 
 @property (nonatomic, strong) id<KZConnectionManagerDelegate> delegate;
 @property (nonatomic, strong) KZResponse *kzResponse;
-- (id)initWithAppCenterUrl:(NSString*)appCenterUrl andAppName:(NSString*)appNameUrl;
+
 @end
 

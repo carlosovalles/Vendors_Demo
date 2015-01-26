@@ -24,6 +24,7 @@
 		4299271119622A2900EEC798 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4299271019622A2900EEC798 /* libicucore.dylib */; };
 		4299271419622B7A00EEC798 /* KZConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4299271319622B7A00EEC798 /* KZConnectionManager.m */; };
 		42BCB85319642E7F00D8EC4B /* kz.client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42BCB85219642E7F00D8EC4B /* kz.client.a */; };
+		B13407A01A769C6F004C56A5 /* KZLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B134079F1A769C6F004C56A5 /* KZLoginViewController.xib */; };
 		BC3EE1FA1A2E4D71008D86B7 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3EE1F91A2E4D71008D86B7 /* CoreTelephony.framework */; };
 		BC3EE1FC1A2E4DD7008D86B7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3EE1FB1A2E4DD7008D86B7 /* CFNetwork.framework */; };
 		BC3EE1FE1A2E4DFF008D86B7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3EE1FD1A2E4DFF008D86B7 /* CoreLocation.framework */; };
@@ -138,6 +139,7 @@
 		42FFB60819B69A9F0024FD0D /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
 		42FFB60919B69A9F0024FD0D /* SVHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVHTTPClient.h; sourceTree = "<group>"; };
 		42FFB60A19B69A9F0024FD0D /* SVHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVHTTPRequest.h; sourceTree = "<group>"; };
+		B134079F1A769C6F004C56A5 /* KZLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KZLoginViewController.xib; sourceTree = "<group>"; };
 		BC3EE1F91A2E4D71008D86B7 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		BC3EE1FB1A2E4DD7008D86B7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		BC3EE1FD1A2E4DFF008D86B7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -222,6 +224,7 @@
 				421E31EB19B6EC8D00F4B033 /* KZVendorViewController.h */,
 				421E31EC19B6EC8D00F4B033 /* KZVendorViewController.m */,
 				429324EA19B6A58B00F99A8A /* KZLoginViewController.h */,
+				B134079F1A769C6F004C56A5 /* KZLoginViewController.xib */,
 				429324EB19B6A58B00F99A8A /* KZLoginViewController.m */,
 				429926EF1962294700EEC798 /* Images.xcassets */,
 				429926E41962294700EEC798 /* Supporting Files */,
@@ -386,6 +389,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B13407A01A769C6F004C56A5 /* KZLoginViewController.xib in Resources */,
 				429926E81962294700EEC798 /* InfoPlist.strings in Resources */,
 				429926F01962294700EEC798 /* Images.xcassets in Resources */,
 			);
@@ -405,7 +409,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export PATH=$PATH:/usr/local/sbin:/usr/local/bin\nexport NODE_PATH=\"/usr/local/lib/node_modules/\"\n\n\nUPLOAD_DSYM=true # If you want to disable dSYM Uploading, set this to false\nUPLOAD_ONLY_IN_RELEASE=false #If you want to also upload when in Debug mode, set this to false\n\nDSYM_FILE_PATH=${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}\nAPPNAME=\"msdynamimcs\"\nAPP_CENTER_URL=\"https://public.kidocloud.com\"\n\nif [ \"$UPLOAD_DSYM\" == true ]; then\nif [ \"YOUR_APP_NAME_HERE\" == \"${APPNAME}\" ]; then\n\necho \"warning: Please add the application name. It's the one in the application center url.\"\n\nelif [ \"APP_CENTER_URL\" == \"${APP_CENTER_URL}\" ]; then\n\necho \"warning: Please add your app center url.\"\n\nelif [ \"Release\" == \"${CONFIGURATION}\" ] || [ \"$UPLOAD_ONLY_IN_RELEASE\" == false ]; then\n\necho \"Remember to run kido hosting ${APP_CENTER_URL} in a terminal so that kido command can upload the dSYM file.\"\necho \"Please refer to http://docs.kidozen.com/ios-and-android-crash-reports/#Uploading-iOS-symbols for complete documentation.\"\n\nkido app-crash $DSYM_FILE_PATH $APPNAME $APP_CENTER_URL\nfi\nfi";
+			shellScript = "export PATH=$PATH:/usr/local/sbin:/usr/local/bin\nexport NODE_PATH=\"/usr/local/lib/node_modules/\"\nexport NODE_TLS_REJECT_UNAUTHORIZED=\"0\"\n\n\nUPLOAD_DSYM=true # If you want to disable dSYM Uploading, set this to false\nUPLOAD_ONLY_IN_RELEASE=false #If you want to also upload when in Debug mode, set this to false\n\nDSYM_FILE_PATH=${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}\nAPPNAME=\"msdynamics\"\nAPP_CENTER_URL=\"public.kidocloud.com\"\n\nif [ \"$UPLOAD_DSYM\" == true ]; then\nif [ \"YOUR_APP_NAME_HERE\" == \"${APPNAME}\" ]; then\n\necho \"warning: Please add the application name. It's the one in the application center url.\"\n\nelif [ \"APP_CENTER_URL\" == \"${APP_CENTER_URL}\" ]; then\n\necho \"warning: Please add your app center url.\"\n\nelif [ \"Release\" == \"${CONFIGURATION}\" ] || [ \"$UPLOAD_ONLY_IN_RELEASE\" == false ]; then\n\necho \"Remember to run kido hosting ${APP_CENTER_URL} in a terminal so that kido command can upload the dSYM file.\"\necho \"Please refer to http://docs.kidozen.com/ios-and-android-crash-reports/#Uploading-iOS-symbols for complete documentation.\"\n\nkido app-crash $DSYM_FILE_PATH $APPNAME $APP_CENTER_URL\nfi\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
