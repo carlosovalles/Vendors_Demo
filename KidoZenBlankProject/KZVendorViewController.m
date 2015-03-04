@@ -89,7 +89,11 @@ static NSString * const cellReuseId = @"cellReuseId";
     [ds Query:^(KZResponse *r) {
         NSLog(@"Response: %@",r.response);
         if ([[r.response objectForKey:@"data"] count] > 0){
-            _vendorsDataSource = (NSMutableArray*)[[[r.response objectForKey:@"data"] reverseObjectEnumerator] allObjects];
+            
+            NSArray *rawArray = [[[r.response objectForKey:@"data"] reverseObjectEnumerator] allObjects];
+            [self fillDatasourceWithArray:rawArray];
+            
+            
             [self setUpVendorTableView];
         }
     }];
@@ -112,6 +116,17 @@ static NSString * const cellReuseId = @"cellReuseId";
         _weatherCityLbl.text = [NSString stringWithFormat:@"%@, %@",[_weatherResponse objectForKey:@"City"],[_weatherResponse objectForKey:@"State"]];
     }];
     
+}
+
+- (void) fillDatasourceWithArray:(NSArray *)array {
+    _vendorsDataSource = [[NSMutableArray alloc] init];
+    
+    for (id object in array) {
+        if ([[object objectForKey:@"data"] count] > 0) {
+            [_vendorsDataSource addObject:object];
+        }
+    }
+
 }
 
 - (void) showDataViz{
@@ -245,8 +260,8 @@ static NSString * const cellReuseId = @"cellReuseId";
         supplierID = (UILabel *)[cell.contentView viewWithTag:1005];
     }
   
-    nameLabel.text = [[[[_vendorsDataSource objectAtIndex:indexPath.row] objectForKey:@"attributes"] objectAtIndex:0] objectForKey:@"_"];
-    supplierID.text= [[[[_vendorsDataSource objectAtIndex:indexPath.row] objectForKey:@"attributes"] objectAtIndex:1] objectForKey:@"_"];
+    nameLabel.text = [[[[_vendorsDataSource objectAtIndex:indexPath.row] objectForKey:@"data"] objectAtIndex:0] objectForKey:@"value"];
+    supplierID.text= [[[[_vendorsDataSource objectAtIndex:indexPath.row] objectForKey:@"data"] objectAtIndex:1] objectForKey:@"value"];
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
@@ -442,7 +457,11 @@ static NSString * const cellReuseId = @"cellReuseId";
         
         KZDatasource *dynamicsGetContacts = [[[KZConnectionManager sharedKZConnectionManager] kzResponse].application DataSourceWithName:@"getContacts"];
         [dynamicsGetContacts Query:^(KZResponse *r) {
-            _vendorsDataSource = (NSMutableArray*)[[[r.response objectForKey:@"data"] reverseObjectEnumerator] allObjects];
+            
+            NSArray *rawArray = [[[r.response objectForKey:@"data"] reverseObjectEnumerator] allObjects];
+            [self fillDatasourceWithArray:rawArray];
+
+            
             [_tableView reloadData];
         }];
         
