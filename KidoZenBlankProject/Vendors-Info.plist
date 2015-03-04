@@ -24,12 +24,12 @@
 	<array>
 		<dict>
 			<key>CFBundleURLName</key>
-			<string>com.kidozen.template.dynamics.Vendors</string>
+			<string>com.kidozen.template.dynamics.vendors</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.kidozen.template.dynamics.Vendors.sc2</string>
-				<string>com.kidozen.template.dynamics.Vendors.sc</string>
-				<string>com.kidozen.template.dynamics.Vendors.sc2.1.0.0.0</string>
+				<string>com.kidozen.template.dynamics.vendors.sc2</string>
+				<string>com.kidozen.template.dynamics.vendors.sc</string>
+				<string>com.kidozen.template.dynamics.vendors.sc2.1.0.0.0</string>
 				<string>com.good.gd.discovery</string>
 			</array>
 		</dict>
@@ -37,13 +37,15 @@
 	<key>CFBundleVersion</key>
 	<string>1.2</string>
 	<key>GDApplicationID</key>
-	<string>com.kidozen.template.dynamics.Vendors</string>
+	<string>com.kidozen.template.dynamics.vendors</string>
 	<key>GDApplicationVersion</key>
 	<string>1</string>
 	<key>GDConsoleLogger</key>
 	<string>GDFilterNone</string>
 	<key>GDLibraryMode</key>
 	<string>GDEnterpriseSimulationxxx</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>

@@ -52,7 +52,7 @@
 		42204C2D1A093BE600C07F76 /* Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colors.m; sourceTree = "<group>"; };
 		429324EA19B6A58B00F99A8A /* KZLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZLoginViewController.h; sourceTree = "<group>"; };
 		429324EB19B6A58B00F99A8A /* KZLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZLoginViewController.m; sourceTree = "<group>"; };
-		429926DA1962294700EEC798 /* Vendors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vendors.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		429926DA1962294700EEC798 /* vendors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vendors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		429926DD1962294700EEC798 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		429926DF1962294700EEC798 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		429926E11962294700EEC798 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -214,7 +214,7 @@
 		429926DB1962294700EEC798 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				429926DA1962294700EEC798 /* Vendors.app */,
+				429926DA1962294700EEC798 /* vendors.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -390,7 +390,7 @@
 			);
 			name = Vendors;
 			productName = KidoZenBlankProject;
-			productReference = 429926DA1962294700EEC798 /* Vendors.app */;
+			productReference = 429926DA1962294700EEC798 /* vendors.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -589,7 +589,7 @@
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_NAME = Vendors;
+				PRODUCT_NAME = vendors;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -620,7 +620,7 @@
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_NAME = Vendors;
+				PRODUCT_NAME = vendors;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
