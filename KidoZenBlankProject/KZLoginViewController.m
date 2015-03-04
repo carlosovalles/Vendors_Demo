@@ -10,7 +10,8 @@
 #import "KZConnectionManager.h"
 #import "KZVendorViewController.h"
 #import "KZResponse.h"
-
+#import "KZApplication.h"
+#import "KZAnalytics.h"
 
 #define KidoZenProvider @"Kidozen"
 #define KidoZenUser @"public@kidozen.com"
@@ -18,9 +19,6 @@
 @interface KZLoginViewController () <UITextFieldDelegate,KZConnectionManagerDelegate>
 @property (nonatomic,strong) KZConnectionManager *kidoZenConector;
 @property (nonatomic,strong) KZResponse *kzResponse;
-@property (nonatomic,strong) IBOutlet UITextField *mailTextField;
-@property (nonatomic,strong) IBOutlet UITextField *passTextField;
-@property (nonatomic,strong) IBOutlet UIView *loginComponent;
 
 @end
 
@@ -51,46 +49,39 @@
 
 - (IBAction)authUser:(id)sender{
     
+    KZApplication *kzApplication = _kzResponse.application;
     
-    // Activity indicator to show UI element while waiting for user authentication server-response.
-    UIActivityIndicatorView * waitingGear = [[UIActivityIndicatorView alloc]initWithFrame:self.view.bounds];
-    [waitingGear startAnimating];
-    [waitingGear setBackgroundColor:[UIColor colorWithWhite:0 alpha:.7]];
-    [self.view addSubview:waitingGear];
-    [_passTextField resignFirstResponder];
+    __weak KZLoginViewController *safeMe = self;
     
-    
-    [_kzResponse.application authenticateUser:_mailTextField.text
-                                 withProvider:@"Kidozen"
-                                  andPassword:_passTextField.text
-                                   completion:^(id c) {
-                                       if (c) {
-                                           
-                                           NSString *user= [c description];
-                                           if(![user hasPrefix:@"Error"])
-                                           {
-                                             NSLog(@"The User IS authenticated");
-
-                                               [_kzResponse.application enableAnalytics];
-                                               KZVendorViewController * vendorVC = [[KZVendorViewController alloc]init];
-                                            
-                                               UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:vendorVC];
-
+    [kzApplication authenticateWithChallenge:@"challenge"
+                                    provider:@"Good"
+                                  completion:^(id c) {
+                                      
+                                      if (c) {
+                                          
+                                          NSString *user= [c description];
+                                          if(![user hasPrefix:@"Error"])
+                                          {
+                                              NSLog(@"The User IS authenticated");
+                                              
+                                              [_kzResponse.application enableAnalytics];
+                                              [_kzResponse.application.analytics setSessionSecondsTimeOut:2];
+                                              [_kzResponse.application.analytics setUploadMaxSecondsThreshold:10];
+                                              
+                                              KZVendorViewController * vendorVC = [[KZVendorViewController alloc]init];
+                                              
+                                              UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:vendorVC];
+                                              
                                               [vendorVC setNavController:navVC];
-                                               self.view.window.rootViewController = navVC;
-    
-                                           }
-                                           else
-                                           {
-                                               
-                                               NSLog(@"The user authentication Failed!");
-
-                                           }
-                                           
-                                           [waitingGear stopAnimating];
-                                           [waitingGear removeFromSuperview];
-                                       }
-                                   }];
+                                              safeMe.view.window.rootViewController = navVC;
+                                              
+                                          }
+                                          else
+                                          {
+                                              NSLog(@"The user authentication Failed!");
+                                          }
+                                      }
+                                  }];
 }
 
 - (void)didReceiveMemoryWarning
