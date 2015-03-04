@@ -8,6 +8,7 @@
 
 #import "KZLogging.h"
 #import "KZObject.h"
+#import <UIKit/UIKit.h>
 
 @class KZApplicationConfiguration;
 @class KZCrashReporter;
@@ -23,6 +24,8 @@
 @class KZFileStorage;
 @class KZAnalytics;
 
+@protocol KZGoodTechnologiesDelegate;
+
 #if TARGET_OS_IPHONE
 @class KZPubSubChannel;
 #endif
@@ -30,6 +33,20 @@
 typedef void (^AuthCompletionBlock)(id);
 typedef void (^TokenExpiresBlock)(id);
 typedef void (^InitializationCompleteBlock)(KZResponse *);
+
+/**
+ *  Whoever implements this protocol interacts with Good Technologies and retrieves
+ *  the token that we need;
+ */
+@protocol KZGoodTechnologiesDelegate <NSObject>
+
+- (void) getGTToken:(NSString *)challenge
+             server:(NSString *)serverURLString
+            success:(void(^)(NSString *token))success
+              error:(void (^)(NSError *error))failure;
+
+@end
+
 
 /**
  *
@@ -41,6 +58,7 @@ typedef void (^InitializationCompleteBlock)(KZResponse *);
 @property (nonatomic, readonly) KZCrashReporter *crashreporter;
 @property (nonatomic, copy) InitializationCompleteBlock onInitializationComplete;
 @property (nonatomic, readonly) KZApplicationConfiguration *applicationConfig;
+@property (nonatomic, weak) id<KZGoodTechnologiesDelegate> gtDelegate;
 
 /**
  * Constructor
@@ -102,6 +120,21 @@ typedef void (^InitializationCompleteBlock)(KZResponse *);
             withProvider:(NSString *)provider
              andPassword:(NSString *)password;
 
+
+/**
+ *  This way of authenticating is used for GD (Good Technologies) authentication. You
+ *  have to provide a challenge and the server to which you are authenticating to.
+ *  It'll open up a webview (handled by Good Technologies SDK included in here) and
+ *  there you have to provide your credentials.
+ *
+ *  @param challenge The challenge with which a token will get generated.
+ *  @param server    The server to which you are going to authenticate to.
+ *  @param provider  The provider you will
+ *  @param block     The callback what will get called.
+ */
+-(void) authenticateWithChallenge:(NSString *)challenge
+                         provider:(NSString *)provider
+                       completion:(void(^)(id))block;
 
 /**
     Handles authentication when you only have your application's Application Key.
@@ -337,4 +370,20 @@ typedef void (^InitializationCompleteBlock)(KZResponse *);
                                success:(void (^)(void))success
                                 error:(void (^)(NSError *error))failure;
 
+/**
+ *  This method returns the view containing the uiwebview, progress and loading indicator.
+ *
+ *  @param dataVizName is the name of the visualization. It should be exactly the same as what appears
+ *                     in the web.
+ *  @param success     is the block that will be called when the datavisualization has been loaded.
+ *  @param failure     is the block that will be called when an error occurs.
+ *
+ *  @return the view that will contain the webview displaying the data visualization, as well as the 
+ *          progress indicator.
+ */
+- (UIView *)dataVisualizationWithName:(NSString *)dataVizName
+                              success:(void (^)(void))success
+                                error:(void (^)(NSError *error))failure;
+
 @end
+
