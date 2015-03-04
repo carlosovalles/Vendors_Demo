@@ -183,7 +183,7 @@ static NSString * const cellReuseId = @"cellReuseId";
         
         
         KZDatasource *ds = [[[KZConnectionManager sharedKZConnectionManager] kzResponse].application DataSourceWithName:@"dynamicsDeleteContact"];
-        NSString *jsonString = [NSString stringWithFormat:@"{\"idNumber\":\"%@\"}", [[[[_vendorsDataSource objectAtIndex:indexPath.row] objectForKey:@"attributes"]objectAtIndex:1] objectForKey:@"_"]];
+        NSString *jsonString = [NSString stringWithFormat:@"{\"idNumber\":\"%@\"}", [[[[_vendorsDataSource objectAtIndex:indexPath.row] objectForKey:@"data"] objectAtIndex:1] objectForKey:@"value"]];
         NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
         NSError *error = nil;
         NSDictionary *myDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
