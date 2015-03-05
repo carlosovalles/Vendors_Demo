@@ -33,7 +33,7 @@
 		6D58DA301AA73A4A00C2587B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D58DA2F1AA73A4A00C2587B /* MessageUI.framework */; };
 		6D58DA321AA73A5300C2587B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D58DA311AA73A5300C2587B /* MobileCoreServices.framework */; };
 		6D58DA341AA73A5D00C2587B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D58DA331AA73A5D00C2587B /* CoreData.framework */; };
-		6D58DA361AA73A7900C2587B /* GD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D58DA351AA73A7900C2587B /* GD.framework */; };
+		6D827CC21AA8D44F0003BE95 /* GD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D827CC11AA8D44F0003BE95 /* GD.framework */; };
 		B13407A01A769C6F004C56A5 /* KZLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B134079F1A769C6F004C56A5 /* KZLoginViewController.xib */; };
 		BC3EE1FA1A2E4D71008D86B7 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3EE1F91A2E4D71008D86B7 /* CoreTelephony.framework */; };
 		BC3EE1FC1A2E4DD7008D86B7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3EE1FB1A2E4DD7008D86B7 /* CFNetwork.framework */; };
@@ -158,7 +158,7 @@
 		6D58DA2F1AA73A4A00C2587B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		6D58DA311AA73A5300C2587B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		6D58DA331AA73A5D00C2587B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		6D58DA351AA73A7900C2587B /* GD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GD.framework; path = System/Library/Frameworks/GD.framework; sourceTree = SDKROOT; };
+		6D827CC11AA8D44F0003BE95 /* GD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GD.framework; path = libs/GD.framework; sourceTree = "<group>"; };
 		B134079F1A769C6F004C56A5 /* KZLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KZLoginViewController.xib; sourceTree = "<group>"; };
 		BC3EE1F91A2E4D71008D86B7 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		BC3EE1FB1A2E4DD7008D86B7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -172,7 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D58DA361AA73A7900C2587B /* GD.framework in Frameworks */,
+				6D827CC21AA8D44F0003BE95 /* GD.framework in Frameworks */,
 				6D58DA341AA73A5D00C2587B /* CoreData.framework in Frameworks */,
 				6D58DA321AA73A5300C2587B /* MobileCoreServices.framework in Frameworks */,
 				6D58DA301AA73A4A00C2587B /* MessageUI.framework in Frameworks */,
@@ -222,7 +222,7 @@
 		429926DC1962294700EEC798 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6D58DA351AA73A7900C2587B /* GD.framework */,
+				6D827CC11AA8D44F0003BE95 /* GD.framework */,
 				6D58DA331AA73A5D00C2587B /* CoreData.framework */,
 				6D58DA311AA73A5300C2587B /* MobileCoreServices.framework */,
 				6D58DA2F1AA73A4A00C2587B /* MessageUI.framework */,
@@ -572,6 +572,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KidoZenBlankProject/Vendors-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -603,6 +607,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KidoZenBlankProject/Vendors-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
